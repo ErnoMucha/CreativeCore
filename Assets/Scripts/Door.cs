@@ -8,6 +8,7 @@ public class Door : MonoBehaviour
 {
     private int count = 0;
     public int size;
+    public Animator DoorAnimator;
 
     private void Start()
     {
@@ -19,7 +20,7 @@ public class Door : MonoBehaviour
         count++;
         if(count == size)
         {
-            gameObject.SetActive(false);
+            DoorAnimator.SetBool("Open", true);
         }
     }
 }
